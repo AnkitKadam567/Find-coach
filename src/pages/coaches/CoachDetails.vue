@@ -1,0 +1,32 @@
+<template>
+  <section>
+    <base-card>
+      <h2>{{ fullName }}</h2>
+      <h3>${{ rate }}/houe</h3>
+    </base-card>
+  </section>
+  <section>
+    <base-card>
+      <header>
+        <h2>Interested? Reach out now!</h2>
+        <base-button link :to="contactLink">Contact</base-button>
+      </header>
+      <router-view></router-view>
+    </base-card>
+  </section>
+  <section>
+    <base-badge
+      v-for="area in areas"
+      :key="area"
+      :type="area"
+      :title="area"
+    ></base-badge>
+    <p>{{ description }}</p>
+  </section>
+</template>
+
+<script>
+export default {
+  props: ["id"],
+};
+</script>
