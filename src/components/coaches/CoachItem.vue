@@ -11,7 +11,7 @@
       ></base-badge>
     </div>
     <div class="actions">
-      <base-button mode="outline" :to="coachContactList">Contact</base-button>
+      <base-button mode="outline" link :to="contactLink">Contact</base-button>
       <base-button link :to="coachDetailsLink">Details</base-button>
     </div>
   </li>
@@ -27,7 +27,7 @@ export default {
     fullName() {
       return this.firstName + " " + this.lastName;
     },
-    coachContactList() {
+    contactLink() {
       return this.$route.path + "/" + this.id + "/contact";
     },
     coachDetailsLink() {
